@@ -1,5 +1,12 @@
 const fs = require('fs');
 //readable stream
+const http = require('http');
+const server = http.createServer((req, res) =>{
+    console.log('server created')
+})
+server.listen(3000 , 'localhost' ,()=>{
+    console.log("listening");
+})
 const readStream = fs.createReadStream('./file.txt' , {encoding:'utf8'});
 //writable stream
 const writeStream = fs.createWriteStream('./file2.txt');

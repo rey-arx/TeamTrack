@@ -10,12 +10,18 @@ fs.readFile('./file.txt' , (err , data) =>{
 });
 console.log("hey");
 //writing files
-fs.writeFile('./file.txt','hello' , (err) = {
+fs.writeFile('./file.txt','hello' , (err) => {
     console.log('File has been written');
 } )
 //diirectories 
-fs.writeFile('./file1.txt','hello' , (err) = {
+fs.writeFile('./file1.txt','hello' , (err) => {
     console.log('File has been created and written');
 } )
+fs.readFile('./file.txt' , (err , data) =>{
+    if(err){
+        console.log(err)
+    }
+    console.log(data.toString());
+});
 //deleting files
 
